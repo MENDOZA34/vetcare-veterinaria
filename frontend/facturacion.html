@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturacion - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/facturacion.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <div class="nav-links">
+        <a href="dashboard-admin.html">Panel de administracion</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="vacunas.html">Vacunas</a>
+        <a href="reportes.html">Reportes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Administrador</p>
+      <h1>Facturacion</h1>
+      <p>Registra facturas, agrega conceptos y controla su estado de pago.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formFactura" class="formulario">
+        <input type="hidden" id="id_factura">
+        <label>Fecha <input type="date" id="fecha" required></label>
+        <label>Cliente <select id="id_cliente" required></select></label>
+        <label>Estado
+          <select id="estado" required>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Pagada">Pagada</option>
+            <option value="Anulada">Anulada</option>
+          </select>
+        </label>
+        <div class="acciones-form">
+          <button type="button" class="boton secundario" id="btnAgregarDetalle">Agregar detalle</button>
+          <button type="submit" class="boton principal" id="btnGuardarFactura">Guardar factura</button>
+          <button type="button" class="boton secundario" id="btnLimpiarFactura">Limpiar</button>
+        </div>
+      </form>
+
+      <div class="detalle-factura-tabla">
+        <table>
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Cantidad</th>
+              <th>Precio unitario</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDetallesFactura"></tbody>
+        </table>
+      </div>
+
+      <p class="mensaje total-factura">Total: <strong id="totalFactura">Q 0.00</strong></p>
+      <p id="mensajeFactura" class="mensaje"></p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Estado</th>
+            <th>Detalles</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaFacturas"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

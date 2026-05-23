@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard recepcion - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/dashboard-recepcion.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-recepcion.html"><span class="marca-svg"></span><span>VetCare Recepcion</span></a>
+      <div class="nav-links menu-rol">
+        <a href="dashboard-recepcion.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor dashboard">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Recepcionista</p>
+      <h1>Panel de recepcion</h1>
+      <p>Registra clientes, mascotas y organiza las citas de atencion veterinaria.</p>
+    </section>
+
+    <section class="resumen-grid">
+      <article class="resumen-card"><span>Clientes</span><strong id="totalClientes">0</strong></article>
+      <article class="resumen-card"><span>Mascotas</span><strong id="totalMascotas">0</strong></article>
+      <article class="resumen-card"><span>Citas pendientes</span><strong id="totalPendientes">0</strong></article>
+    </section>
+
+    <section class="modulos modulos-dashboard">
+      <a class="tarjeta" href="clientes.html"><span class="icono">C</span><h2>Clientes</h2><p>Consulta y actualiza los datos de los propietarios.</p></a>
+      <a class="tarjeta" href="mascotas.html"><span class="icono">M</span><h2>Mascotas</h2><p>Registra mascotas y manten su informacion al dia.</p></a>
+      <a class="tarjeta" href="citas.html"><span class="icono">A</span><h2>Citas</h2><p>Organiza la agenda y actualiza el estado de atencion.</p></a>
+    </section>
+  </main>
+</body>
+</html>

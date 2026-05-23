@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare Clinica Veterinaria</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-card">
+      <p class="etiqueta">Portal cliente</p>
+      <h1>Crear cuenta cliente</h1>
+      <p class="texto-suave">Crea tu acceso para registrar tus mascotas, solicitar citas y consultar su atencion.</p>
+      <form id="formRegistro" class="formulario auth-form">
+        <label>Nombre <input type="text" id="nombre" required autocomplete="name"></label>
+        <label>Email <input type="email" id="email" required autocomplete="email"></label>
+        <label>Telefono <input type="tel" id="telefono" autocomplete="tel"></label>
+        <label>Direccion <input type="text" id="direccion" autocomplete="street-address"></label>
+        <label>Contrasena <input type="password" id="password" minlength="6" required autocomplete="new-password"></label>
+        <button class="boton principal ancho" type="submit">Crear cuenta</button>
+      </form>
+      <p id="mensajeAuth" class="mensaje"></p>
+      <a class="enlace-auth" href="login.html">Ya tengo cuenta</a>
+    </section>
+  </main>
+</body>
+</html>

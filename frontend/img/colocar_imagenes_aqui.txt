@@ -1,0 +1,31 @@
+Imagenes recomendadas para el proyecto VetCare.
+
+Colocar los archivos dentro de:
+frontend/img/
+
+Nombres exactos:
+
+1. logo-veterinaria.png
+   Uso: logo principal del sistema en el encabezado.
+   Tamano recomendado: 300 x 300 px, fondo transparente.
+
+2. banner-veterinaria.jpg
+   Uso: imagen principal de portada en index.html.
+   Tamano recomendado: 1400 x 900 px.
+
+3. perro.png
+   Uso: recurso visual opcional para secciones o tarjetas de mascotas.
+   Tamano recomendado: 600 x 600 px, fondo transparente.
+
+4. gato.png
+   Uso: recurso visual opcional para secciones o tarjetas de mascotas.
+   Tamano recomendado: 600 x 600 px, fondo transparente.
+
+5. veterinario.png
+   Uso: recurso visual opcional para seccion de veterinarios.
+   Tamano recomendado: 700 x 700 px, fondo transparente.
+
+Notas:
+- Si las imagenes no existen, el diseno no se rompe porque el sistema incluye respaldo visual con CSS.
+- Mantener los nombres exactos para evitar cambiar rutas en HTML.
+- Se recomienda usar imagenes livianas para que la pagina cargue rapido.

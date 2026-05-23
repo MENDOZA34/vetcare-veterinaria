@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VetCare Clinica Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html">
+        <img src="img/logo-veterinaria.png" alt="Logo Veterinaria" onerror="this.style.display='none'">
+        <span class="marca-svg"></span>
+        <span>VetCare Clinica Veterinaria</span>
+      </a>
+      <div class="nav-links">
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-texto animar-entrada">
+        <p class="etiqueta">Veterinaria VetCare</p>
+        <h1>Cuidamos a tus mascotas con atencion profesional</h1>
+        <p>
+          Agenda citas, consulta la atencion de tu mascota y manten su cuidado al dia
+          desde nuestra plataforma veterinaria.
+        </p>
+        <div class="acciones">
+          <a class="boton principal" href="login.html">Agendar cita</a>
+          <a class="boton secundario" href="login.html">Iniciar sesion</a>
+          <a class="boton neutro" href="registro.html">Crear cuenta</a>
+          <a class="boton neutro" href="#servicios">Conocer servicios</a>
+        </div>
+      </div>
+      <div class="hero-imagen animar-flotar">
+        <img src="img/banner-veterinaria.jpg" alt="Banner Veterinaria"
+          onerror="this.src='img/perro.png'; this.onerror=null;">
+      </div>
+    </section>
+
+    <section class="modulos" id="servicios">
+      <a class="tarjeta" href="clientes.html">
+        <span class="icono">C</span>
+        <h2>Atencion a propietarios</h2>
+        <p>Organizamos los datos de contacto para brindar seguimiento oportuno.</p>
+      </a>
+      <a class="tarjeta" href="mascotas.html">
+        <span class="icono">M</span>
+        <h2>Cuidado de mascotas</h2>
+        <p>Mantenemos informacion clara de cada mascota atendida.</p>
+      </a>
+      <a class="tarjeta" href="citas.html">
+        <span class="icono">A</span>
+        <h2>Agenda de citas</h2>
+        <p>Programamos consultas y damos seguimiento al estado de atencion.</p>
+      </a>
+      <a class="tarjeta" href="veterinarios.html">
+        <span class="icono">V</span>
+        <h2>Equipo veterinario</h2>
+        <p>Contamos con personal preparado para cuidar la salud de tus mascotas.</p>
+      </a>
+      <a class="tarjeta" href="tratamientos.html">
+        <span class="icono">T</span>
+        <h2>Tratamientos</h2>
+        <p>Registramos los cuidados aplicados durante cada atencion.</p>
+      </a>
+      <a class="tarjeta" href="historial.html">
+        <span class="icono">H</span>
+        <h2>Seguimiento medico</h2>
+        <p>Conservamos diagnosticos y observaciones para mejorar cada visita.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>VetCare Clinica Veterinaria. Atencion, seguimiento y cuidado para tus mascotas.</p>
+  </footer>
+</body>
+
+</html>

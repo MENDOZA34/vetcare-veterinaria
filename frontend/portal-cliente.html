@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal cliente - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/portal-cliente.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="portal-cliente.html"><span class="marca-svg"></span><span>VetCare Cliente</span></a>
+      <div class="nav-links menu-rol">
+        <a href="portal-cliente.html">Inicio</a>
+        <a href="#perfil">Mi perfil</a>
+        <a href="#mascotas">Mis mascotas</a>
+        <a href="#solicitarCita">Solicitar cita</a>
+        <a href="#misCitas">Mis citas</a>
+        <a href="#misTratamientos">Tratamientos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor portal-cliente">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Portal cliente</p>
+      <h1>Bienvenido a VetCare</h1>
+      <p>Desde aqui puedes consultar tus mascotas, solicitar citas y revisar los tratamientos registrados por la veterinaria.</p>
+    </section>
+
+    <section class="portal-grid">
+      <article class="panel-formulario" id="perfil">
+        <h2>Mi perfil</h2>
+        <div id="perfilCliente" class="perfil-datos"></div>
+      </article>
+
+      <article class="panel-formulario" id="mascotas">
+        <h2>Mis mascotas</h2>
+        <form id="formMascotaCliente" class="formulario formulario-compacto">
+          <input type="hidden" id="id_mascota_cliente">
+          <label>Nombre <input type="text" id="mascota_nombre" required></label>
+          <label>Especie <input type="text" id="mascota_especie" required></label>
+          <label>Raza <input type="text" id="mascota_raza" required></label>
+          <label>Edad <input type="number" min="0" id="mascota_edad" required></label>
+          <label>Sexo
+            <select id="mascota_sexo" required>
+              <option value="">Seleccione</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+            </select>
+          </label>
+          <div class="acciones-form">
+            <button class="boton principal" type="submit">Guardar mascota</button>
+            <button class="boton secundario" type="button" id="btnLimpiarMascotaCliente">Limpiar</button>
+          </div>
+        </form>
+        <p id="mensajePortal" class="mensaje"></p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Mascotas registradas</h2>
+      <div id="listaMascotasCliente" class="cards-lista"></div>
+    </section>
+
+    <section class="panel-formulario" id="solicitarCita">
+      <h2>Solicitar nueva cita</h2>
+      <form id="formCitaCliente" class="formulario">
+        <label>Fecha <input type="date" id="cita_fecha" required></label>
+        <label>Hora <input type="time" id="cita_hora" required></label>
+        <label>Mascota <select id="cita_mascota" required></select></label>
+        <label>Veterinario <select id="cita_veterinario" required></select></label>
+        <label class="campo-ancho">Motivo <textarea id="cita_motivo" required></textarea></label>
+        <div class="acciones-form">
+          <button class="boton principal" type="submit">Solicitar nueva cita</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="misCitas">
+      <h2>Mis citas</h2>
+      <div id="listaCitasCliente" class="cards-lista"></div>
+    </section>
+
+    <section id="misTratamientos">
+      <h2>Tratamientos de mis mascotas</h2>
+      <div id="listaTratamientosCliente" class="cards-lista"></div>
+    </section>
+  </main>
+</body>
+</html>

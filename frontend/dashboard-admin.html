@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard administrador - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/dashboard-admin.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <div class="nav-links menu-rol">
+        <a href="dashboard-admin.html">Inicio</a>
+        <a href="#usuarios">Usuarios</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="citas.html">Citas</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="vacunas.html">Vacunas</a>
+        <a href="facturacion.html">Facturacion</a>
+        <a href="reportes.html">Reportes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor dashboard">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Administrador</p>
+      <h1>Panel de administracion</h1>
+      <p>Gestiona la informacion general de la veterinaria y supervisa la atencion de clientes y mascotas.</p>
+    </section>
+
+    <section class="resumen-grid" id="reportes">
+      <article class="resumen-card"><span>Usuarios del sistema</span><strong id="totalUsuarios">0</strong></article>
+      <article class="resumen-card"><span>Clientes registrados</span><strong id="totalClientes">0</strong></article>
+      <article class="resumen-card"><span>Mascotas registradas</span><strong id="totalMascotas">0</strong></article>
+      <article class="resumen-card"><span>Citas programadas</span><strong id="totalCitas">0</strong></article>
+      <article class="resumen-card"><span>Citas pendientes</span><strong id="totalCitasPendientes">0</strong></article>
+      <article class="resumen-card"><span>Citas atendidas</span><strong id="totalCitasAtendidas">0</strong></article>
+      <article class="resumen-card"><span>Citas canceladas</span><strong id="totalCitasCanceladas">0</strong></article>
+      <article class="resumen-card"><span>Veterinarios activos</span><strong id="totalVeterinarios">0</strong></article>
+      <article class="resumen-card"><span>Tratamientos registrados</span><strong id="totalTratamientos">0</strong></article>
+      <article class="resumen-card"><span>Productos en inventario</span><strong id="totalInventario">0</strong></article>
+      <article class="resumen-card"><span>Vacunas registradas</span><strong id="totalVacunas">0</strong></article>
+      <article class="resumen-card"><span>Facturas registradas</span><strong id="totalFacturas">0</strong></article>
+      <article class="resumen-card"><span>Total facturado</span><strong id="totalFacturado">Q 0.00</strong></article>
+    </section>
+
+    <section class="panel-formulario" id="usuarios">
+      <h2>Usuarios del sistema</h2>
+      <form id="formUsuarioInterno" class="formulario">
+        <input type="hidden" id="id_usuario">
+        <label>Nombre <input type="text" id="nombre" required></label>
+        <label>Email <input type="email" id="email" required></label>
+        <label>Contrasena <input type="password" id="password" minlength="6"></label>
+        <label>Rol
+          <select id="rol" required>
+            <option value="recepcionista">Recepcionista</option>
+            <option value="veterinario">Veterinario</option>
+            <option value="administrador">Administrador</option>
+            <option value="cliente">Cliente</option>
+          </select>
+        </label>
+        <label>Estado
+          <select id="estado">
+            <option value="true">Activo</option>
+            <option value="false">Inactivo</option>
+          </select>
+        </label>
+        <div class="acciones-form">
+          <button class="boton principal" type="submit">Guardar usuario</button>
+          <button class="boton secundario" type="button" id="btnLimpiarUsuario">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensajeAdmin" class="mensaje"></p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaUsuarios"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

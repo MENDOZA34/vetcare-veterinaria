@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes - Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/clientes.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <h1>Clientes y propietarios</h1>
+      <p>Consulta y actualiza la informacion de contacto de los propietarios de las mascotas.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formCliente" class="formulario">
+        <input type="hidden" id="id_cliente">
+        <label>Nombre <input type="text" id="nombre" required></label>
+        <label>Telefono <input type="text" id="telefono" required></label>
+        <label>Email <input type="email" id="email" required></label>
+        <label>Direccion <input type="text" id="direccion" required></label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal" id="btnGuardar">Guardar</button>
+          <button type="button" class="boton secundario" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+      <p class="nota-seguridad">Actualiza los datos del propietario cuando sea necesario.</p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Direccion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaClientes"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

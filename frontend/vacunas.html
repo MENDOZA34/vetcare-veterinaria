@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacunas - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/vacunas.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <div class="nav-links">
+        <a href="dashboard-admin.html">Panel de administracion</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="facturacion.html">Facturacion</a>
+        <a href="reportes.html">Reportes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Administrador</p>
+      <h1>Vacunas</h1>
+      <p>Administra el catalogo de vacunas disponible para registrar tratamientos cuando se apliquen a una mascota.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formVacuna" class="formulario">
+        <input type="hidden" id="id_vacuna">
+        <label>Nombre <input type="text" id="nombre" required></label>
+        <label>Precio <input type="number" id="precio" min="0" step="0.01" required></label>
+        <label>Descripcion <textarea id="descripcion" rows="3"></textarea></label>
+        <label>Dosis <input type="text" id="dosis"></label>
+        <label>Frecuencia <input type="text" id="frecuencia"></label>
+        <label>Estado
+          <select id="estado" required>
+            <option value="Disponible">Disponible</option>
+            <option value="Inactiva">Inactiva</option>
+          </select>
+        </label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal" id="btnGuardarVacuna">Guardar vacuna</button>
+          <button type="button" class="boton secundario" id="btnLimpiarVacuna">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensajeVacuna" class="mensaje"></p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Dosis</th>
+            <th>Frecuencia</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaVacunas"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

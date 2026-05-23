@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial Medico - Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/historial.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <h1>Historial medico</h1>
+      <p>Consulta y registra diagnosticos, observaciones y seguimiento de cada mascota.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formHistorial" class="formulario">
+        <input type="hidden" id="id_historial">
+        <label>Fecha <input type="date" id="fecha" required></label>
+        <label>Diagnostico <textarea id="diagnostico" required></textarea></label>
+        <label>Observaciones <textarea id="observaciones" required></textarea></label>
+        <label>Mascota <select id="id_mascota" required></select></label>
+        <label>Veterinario <select id="id_veterinario" required></select></label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal">Guardar</button>
+          <button type="button" class="boton secundario" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+      <p class="nota-seguridad">Registra informacion clara para el seguimiento veterinario.</p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Diagnostico</th>
+            <th>Observaciones</th>
+            <th>Mascota</th>
+            <th>Veterinario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaHistorial"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

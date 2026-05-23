@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard veterinario - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/dashboard-veterinario.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-veterinario.html"><span class="marca-svg"></span><span>VetCare Veterinario</span></a>
+      <div class="nav-links menu-rol">
+        <a href="dashboard-veterinario.html">Inicio</a>
+        <a href="citas.html">Citas</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor dashboard">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Veterinario</p>
+      <h1>Panel veterinario</h1>
+      <p>Consulta las citas asignadas, registra tratamientos y actualiza el seguimiento medico de las mascotas.</p>
+    </section>
+
+    <section class="resumen-grid">
+      <article class="resumen-card"><span>Citas pendientes</span><strong id="totalPendientes">0</strong></article>
+      <article class="resumen-card"><span>Tratamientos</span><strong id="totalTratamientos">0</strong></article>
+      <article class="resumen-card"><span>Historiales</span><strong id="totalHistorial">0</strong></article>
+    </section>
+
+    <section class="tabla-contenedor" id="citasAsignadas">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Mascota</th>
+            <th>Cliente</th>
+            <th>Motivo</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="tablaCitasVeterinario"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

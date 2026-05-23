@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinarios - Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/veterinarios.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <h1>Equipo veterinario</h1>
+      <p>Administra los datos de contacto y especialidad del personal veterinario.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formVeterinario" class="formulario">
+        <input type="hidden" id="id_veterinario">
+        <label>Nombre <input type="text" id="nombre" required></label>
+        <label>Especialidad <input type="text" id="especialidad" required></label>
+        <label>Telefono <input type="text" id="telefono" required></label>
+        <label>Email <input type="email" id="email" required></label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal">Guardar</button>
+          <button type="button" class="boton secundario" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+      <p class="nota-seguridad">Actualiza los datos del personal veterinario.</p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaVeterinarios"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratamientos - Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/tratamientos.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="historial.html">Historial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <h1>Tratamientos realizados</h1>
+      <p>Registra los tratamientos aplicados a las mascotas atendidas.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <div id="mascotaAtendida" class="aviso-contexto" hidden></div>
+      <form id="formTratamiento" class="formulario">
+        <input type="hidden" id="id_tratamiento">
+        <label>Nombre del tratamiento <input type="text" id="nombre" required></label>
+        <label>Descripcion <textarea id="descripcion" required></textarea></label>
+        <label>Costo <input type="number" step="0.01" min="0" id="costo" required></label>
+        <label>Mascota <select id="id_mascota" required></select></label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal">Guardar tratamiento</button>
+          <button type="button" class="boton secundario" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+      <p class="nota-seguridad">Registra el tratamiento indicado para la mascota atendida.</p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Costo</th>
+            <th>Mascota</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaTratamientos"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

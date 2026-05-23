@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mascotas - Veterinaria</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/mascotas.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <h1>Mascotas registradas</h1>
+      <p>Consulta y actualiza los datos de cada mascota atendida en la veterinaria.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formMascota" class="formulario">
+        <input type="hidden" id="id_mascota">
+        <label>Nombre <input type="text" id="nombre" required></label>
+        <label>Especie <input type="text" id="especie" required></label>
+        <label>Raza <input type="text" id="raza" required></label>
+        <label>Edad <input type="number" id="edad" min="0" required></label>
+        <label>Sexo <input type="text" id="sexo" required></label>
+        <label>Propietario
+          <select id="id_cliente" required></select>
+        </label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal">Guardar</button>
+          <button type="button" class="boton secundario" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensaje" class="mensaje"></p>
+      <p class="nota-seguridad">Corrige o actualiza la informacion de la mascota registrada.</p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Propietario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaMascotas"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

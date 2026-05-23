@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/inventario.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <div class="nav-links">
+        <a href="dashboard-admin.html">Panel de administracion</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+        <a href="vacunas.html">Vacunas</a>
+        <a href="facturacion.html">Facturacion</a>
+        <a href="reportes.html">Reportes</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Administrador</p>
+      <h1>Inventario</h1>
+      <p>Gestiona productos, medicamentos, insumos y otros elementos de la veterinaria.</p>
+    </section>
+
+    <section class="panel-formulario">
+      <form id="formInventario" class="formulario">
+        <input type="hidden" id="id_inventario">
+        <label>Nombre del producto <input type="text" id="nombre_producto" required></label>
+        <label>Categoria
+          <select id="categoria" required>
+            <option value="">Seleccione una categoria</option>
+            <option value="Medicamento">Medicamento</option>
+            <option value="Vacuna">Vacuna</option>
+            <option value="Insumo">Insumo</option>
+            <option value="Producto">Producto</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </label>
+        <label>Descripcion <textarea id="descripcion" rows="3"></textarea></label>
+        <label>Cantidad <input type="number" id="cantidad" min="0" required></label>
+        <label>Precio unitario <input type="number" id="precio_unitario" min="0" step="0.01" required></label>
+        <label>Estado
+          <select id="estado" required>
+            <option value="Disponible">Disponible</option>
+            <option value="Agotado">Agotado</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+        </label>
+        <div class="acciones-form">
+          <button type="submit" class="boton principal" id="btnGuardarInventario">Guardar producto</button>
+          <button type="button" class="boton secundario" id="btnLimpiarInventario">Limpiar</button>
+        </div>
+      </form>
+      <p id="mensajeInventario" class="mensaje"></p>
+    </section>
+
+    <section class="tabla-contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaInventario"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

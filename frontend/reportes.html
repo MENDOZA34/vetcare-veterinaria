@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/reportes.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <div class="nav-links">
+        <a href="dashboard-admin.html">Panel de administracion</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="citas.html">Citas</a>
+        <a href="veterinarios.html">Veterinarios</a>
+        <a href="tratamientos.html">Tratamientos</a>
+        <a href="historial.html">Historial medico</a>
+        <a href="inventario.html">Inventario</a>
+        <a href="vacunas.html">Vacunas</a>
+        <a href="facturacion.html">Facturacion</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor dashboard">
+    <section class="titulo-pagina">
+      <p class="etiqueta">Administrador</p>
+      <h1>Reportes administrativos</h1>
+      <p>Consulta el resumen general de actividad, catalogos y facturacion.</p>
+    </section>
+
+    <section class="resumen-grid">
+      <article class="resumen-card"><span>Usuarios</span><strong id="totalUsuarios">0</strong></article>
+      <article class="resumen-card"><span>Clientes</span><strong id="totalClientes">0</strong></article>
+      <article class="resumen-card"><span>Mascotas</span><strong id="totalMascotas">0</strong></article>
+      <article class="resumen-card"><span>Citas</span><strong id="totalCitas">0</strong></article>
+      <article class="resumen-card"><span>Citas pendientes</span><strong id="totalCitasPendientes">0</strong></article>
+      <article class="resumen-card"><span>Citas atendidas</span><strong id="totalCitasAtendidas">0</strong></article>
+      <article class="resumen-card"><span>Citas canceladas</span><strong id="totalCitasCanceladas">0</strong></article>
+      <article class="resumen-card"><span>Veterinarios</span><strong id="totalVeterinarios">0</strong></article>
+      <article class="resumen-card"><span>Tratamientos</span><strong id="totalTratamientos">0</strong></article>
+      <article class="resumen-card"><span>Inventario</span><strong id="totalInventario">0</strong></article>
+      <article class="resumen-card"><span>Vacunas</span><strong id="totalVacunas">0</strong></article>
+      <article class="resumen-card"><span>Facturas</span><strong id="totalFacturas">0</strong></article>
+      <article class="resumen-card"><span>Total facturado</span><strong id="totalFacturado">Q 0.00</strong></article>
+    </section>
+
+    <p id="mensajeReportes" class="mensaje"></p>
+  </main>
+</body>
+</html>

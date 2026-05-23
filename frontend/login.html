@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesion - VetCare</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="nav">
+      <a class="marca" href="index.html"><span class="marca-svg"></span><span>VetCare Clinica Veterinaria</span></a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mascotas.html">Mascotas</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-card">
+      <div class="modal-logo"></div>
+      <p class="etiqueta">Acceso seguro</p>
+      <h1>Iniciar sesion</h1>
+      <p class="texto-suave">Ingresa para consultar tus citas, dar seguimiento a mascotas o atender las actividades de la veterinaria.</p>
+      <form id="formLogin" class="formulario auth-form">
+        <label>Email <input type="email" id="email" required autocomplete="email"></label>
+        <label>Contrasena <input type="password" id="password" required autocomplete="current-password"></label>
+        <button class="boton principal ancho" type="submit">Iniciar sesion</button>
+      </form>
+      <p id="mensajeAuth" class="mensaje"></p>
+      <a class="enlace-auth" href="registro.html">Crear una cuenta nueva</a>
+    </section>
+  </main>
+</body>
+</html>
