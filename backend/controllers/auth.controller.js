@@ -36,7 +36,7 @@ exports.registro = async (req, res, next) => {
     }
 
     if (password.length < 6) {
-      return res.status(400).json({ mensaje: 'La contrasena debe tener al menos 6 caracteres' });
+      return res.status(400).json({ mensaje: 'La contraseña debe tener al menos 6 caracteres' });
     }
 
     const [usuariosExistentes] = await db.query('SELECT id_usuario FROM usuarios WHERE email = ?', [email]);

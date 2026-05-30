@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,12 @@
   <script src="js/auth.js" defer></script>
   <script src="js/dashboard-admin.js" defer></script>
 </head>
+
 <body>
   <header class="encabezado">
     <nav class="nav">
-      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare Administracion</span></a>
+      <a class="marca" href="dashboard-admin.html"><span class="marca-svg"></span><span>VetCare
+          Administracion</span></a>
       <div class="nav-links menu-rol">
         <a href="dashboard-admin.html">Inicio</a>
         <a href="#usuarios">Usuarios</a>
@@ -46,8 +49,10 @@
       <article class="resumen-card"><span>Citas atendidas</span><strong id="totalCitasAtendidas">0</strong></article>
       <article class="resumen-card"><span>Citas canceladas</span><strong id="totalCitasCanceladas">0</strong></article>
       <article class="resumen-card"><span>Veterinarios activos</span><strong id="totalVeterinarios">0</strong></article>
-      <article class="resumen-card"><span>Tratamientos registrados</span><strong id="totalTratamientos">0</strong></article>
-      <article class="resumen-card"><span>Productos en inventario</span><strong id="totalInventario">0</strong></article>
+      <article class="resumen-card"><span>Tratamientos registrados</span><strong id="totalTratamientos">0</strong>
+      </article>
+      <article class="resumen-card"><span>Productos en inventario</span><strong id="totalInventario">0</strong>
+      </article>
       <article class="resumen-card"><span>Vacunas registradas</span><strong id="totalVacunas">0</strong></article>
       <article class="resumen-card"><span>Facturas registradas</span><strong id="totalFacturas">0</strong></article>
       <article class="resumen-card"><span>Total facturado</span><strong id="totalFacturado">Q 0.00</strong></article>
@@ -59,7 +64,7 @@
         <input type="hidden" id="id_usuario">
         <label>Nombre <input type="text" id="nombre" required></label>
         <label>Email <input type="email" id="email" required></label>
-        <label>Contrasena <input type="password" id="password" minlength="6"></label>
+        <label>Contraseña <input type="password" id="password" minlength="6"></label>
         <label>Rol
           <select id="rol" required>
             <option value="recepcionista">Recepcionista</option>
@@ -99,4 +104,5 @@
     </section>
   </main>
 </body>
+
 </html>

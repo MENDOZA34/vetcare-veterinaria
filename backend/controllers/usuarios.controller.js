@@ -18,7 +18,7 @@ const validarUsuario = ({ nombre, email, password, rol }, rolesValidos, requiere
   }
 
   if (password && password.length < 6) {
-    return 'La contrasena debe tener al menos 6 caracteres';
+    return 'La contraseña debe tener al menos 6 caracteres';
   }
 
   return null;

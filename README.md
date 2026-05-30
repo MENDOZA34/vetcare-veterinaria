@@ -65,7 +65,7 @@ Abrir `frontend/login.html`. Despues del login, el sistema redirige automaticame
 
 ## Usuarios de prueba
 
-Todos usan la contrasena:
+Todos usan la contraseña:
 
 ```text
 123456

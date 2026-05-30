@@ -157,7 +157,7 @@ CREATE TABLE detalle_factura (
     ON DELETE CASCADE
 );
 
--- La contrasena de todos los usuarios de prueba es: 123456
+-- La contraseña de todos los usuarios de prueba es: 123456
 INSERT INTO usuarios (id_usuario, nombre, email, password, rol, estado) VALUES
 (1, 'Administrador General', 'admin@vetcare.com', '$2b$10$CycTS5hLwLSpnS4TXWsA7ukYtbcdLrUCtd.dTFjtpgH6GjihcNdI.', 'administrador', TRUE),
 (2, 'Recepcion General', 'recepcion@vetcare.com', '$2b$10$CycTS5hLwLSpnS4TXWsA7ukYtbcdLrUCtd.dTFjtpgH6GjihcNdI.', 'recepcionista', TRUE),
